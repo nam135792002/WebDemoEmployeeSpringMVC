@@ -23,3 +23,10 @@ CREATE TABLE Employee
 	ID_DEPARTMENT VARCHAR(20) NOT NULL
 	FOREIGN KEY(ID_DEPARTMENT) REFERENCES Department(ID)
 )
+
+CREATE TABLE authorities(
+	id int primary key identity,
+    userId int not null,
+    roleName varchar(50) not null,
+    FOREIGN KEY (userId) REFERENCES UseCase(ID)
+)
